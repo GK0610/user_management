@@ -31,10 +31,10 @@ const NavBar = ({ isLoggedIn, handleLogout }) => {
           </Button>
         ) : (
           <>
-            <Button color="inherit" href="/login">
+            <Button color="inherit" href="#/login">
               Login
             </Button>
-            <Button color="inherit" href="/signup">
+            <Button color="inherit" href="#/signup">
               Signup
             </Button>
           </>
