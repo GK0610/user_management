@@ -1,0 +1,43 @@
+/* Reset default margins, paddings, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Background container */
+.background-container {
+  position: absolute; /* Make it cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/homepage.jpg'); /* Replace with your actual image path */
+  background-size: cover; /* Ensure the image stretches fully while maintaining proportions */
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index: -1; /* Place it behind the content */
+}
+
+/* Content container */
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  z-index: 1; /* Ensure it's above the background */
+}
+
+.content-box {
+  text-align: center;
+  padding: 40px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for the box */
+  border-radius: 10px; /* Rounded corners */
+  max-width: 500px; /* Limit width of content box */
+}

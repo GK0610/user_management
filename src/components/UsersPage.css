@@ -1,0 +1,47 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #1976d2; /* Material-UI primary color */
+  }
+  
+  .navbar-heading {
+    flex-grow: 1;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Users Page Styling */
+  .users-page {
+    margin-top: 20px;
+  }
+  
+  .user-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .user-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .user-image {
+    object-fit: cover;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .page-info {
+    margin: 0 10px;
+  }
+  
+  .drawer-content {
+    width: 300px;
+  }
+  

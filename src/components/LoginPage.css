@@ -1,0 +1,37 @@
+/* General styling for LoginPage */
+.login-page {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling */
+  margin: 0; /* Remove any default margin */
+}
+
+/* Left side: Background Image */
+.login-image {
+  flex: 2;
+  background-image: url('../assets/login.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Right side: Login Form */
+.login-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f7f7f7;
+  border-left: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  width: 100%;
+}
+
+button {
+  margin-top: 20px;
+}
