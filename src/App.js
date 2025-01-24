@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom'; // Use HashRouter for GitHub Pages
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 
 import LoginPage from './components/LoginPage';
@@ -31,10 +31,10 @@ const NavBar = ({ isLoggedIn, handleLogout }) => {
           </Button>
         ) : (
           <>
-            <Button color="inherit" href="#/login"> {/* Use hash links */}
+            <Button color="inherit" href="/login">
               Login
             </Button>
-            <Button color="inherit" href="#/signup"> {/* Use hash links */}
+            <Button color="inherit" href="/signup">
               Signup
             </Button>
           </>
@@ -66,7 +66,7 @@ function App() {
   };
 
   return (
-    <Router> {/* Use HashRouter for GitHub Pages */}
+    <Router>
       <Box>
         {/* Render the NavBar */}
         <NavBar isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
