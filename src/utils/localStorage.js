@@ -74,7 +74,7 @@ export const isEmailOrUsernameTaken = (email, username) => {
   return Object.values(users).some((user) => user.username === username); // Username exists
 };
 
-// Clear a specific user's credentials (optional, but included for completeness)
+// Clear a specific user's credentials 
 export const clearUserCredentials = (email) => {
   const users = getAllUserCredentials();
   if (users[email]) {
