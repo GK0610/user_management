@@ -19,7 +19,7 @@ export const getFromLocalStorage = (key, defaultValue = null) => {
     return serializedValue ? JSON.parse(serializedValue) : defaultValue;
   } catch (error) {
     console.error('Error reading from localStorage:', error);
-    return defaultValue;  // Return the default value if any error occurs
+    return defaultValue; // Return the default value if any error occurs
   }
 };
 
@@ -48,10 +48,10 @@ export const saveLoginState = (isLoggedIn) => {
 
 // Get login state
 export const getLoginState = () => {
-  return getFromLocalStorage('isLoggedIn', false);  // Default to false if no value is found
+  return getFromLocalStorage('isLoggedIn', false); // Default to false if no value is found
 };
 
-// Clear login state and current user
+// Clear only login-related state, but retain user data
 export const clearLoginState = () => {
   localStorage.removeItem('isLoggedIn');
   localStorage.removeItem('currentUser');
@@ -74,9 +74,11 @@ export const isEmailOrUsernameTaken = (email, username) => {
   return Object.values(users).some((user) => user.username === username); // Username exists
 };
 
-// Clear a specific user's credentials
+// Clear a specific user's credentials (optional, but included for completeness)
 export const clearUserCredentials = (email) => {
   const users = getAllUserCredentials();
-  delete users[email];
-  saveToLocalStorage('users', users);
+  if (users[email]) {
+    delete users[email];
+    saveToLocalStorage('users', users);
+  }
 };
